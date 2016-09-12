@@ -80,7 +80,8 @@ from alignak.message import Message
 from alignak.worker import Worker
 from alignak.load import Load
 from alignak.daemon import Daemon
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.stats import statsmgr
 from alignak.check import Check  # pylint: disable=W0611
 
@@ -1042,16 +1043,7 @@ class Satellite(BaseSatellite):  # pylint: disable=R0902
         :return: None
         """
         try:
-            for line in self.get_header():
-                logger.info(line)
-
-            self.load_config_file()
-
-            # Setting log level
-            logger.setLevel(self.log_level)
-            # Force the debug level if the daemon is said to start with such level
-            if self.debug:
-                logger.setLevel('DEBUG')
+            self.setup_alignak_logger()
 
             # Look if we are enabled or not. If ok, start the daemon mode
             self.look_for_early_exit()

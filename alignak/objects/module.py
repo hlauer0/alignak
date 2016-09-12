@@ -57,7 +57,8 @@ from alignak.objects.item import Item, Items
 
 from alignak.property import StringProp, ListProp
 from alignak.util import strip_and_uniq
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class Module(Item):

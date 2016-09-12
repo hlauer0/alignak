@@ -57,7 +57,8 @@ implements dependencies between hosts. Basically used for parsing.
 from alignak.objects.item import Item, Items
 
 from alignak.property import BoolProp, StringProp, ListProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class Hostdependency(Item):

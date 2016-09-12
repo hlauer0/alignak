@@ -1,5 +1,7 @@
+import logging
 from alignak.basemodule import BaseModule
-from alignak.log import logger
+
+logger = logging.getLogger(__name__)
 
 properties = {
     # Which daemon can load this module

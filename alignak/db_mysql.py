@@ -56,7 +56,8 @@ from MySQLdb import ProgrammingError  # pylint: disable=E0401,E0611
 
 
 from alignak.db import DB
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class DBMysql(DB):

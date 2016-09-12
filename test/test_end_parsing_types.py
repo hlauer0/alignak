@@ -42,6 +42,7 @@
 """
 This file is used to test properties types after config loaded and parsed
 """
+import logging
 
 from alignak_test import AlignakTest
 from alignak.property import UnusedProp, StringProp, IntegerProp, \
@@ -53,6 +54,7 @@ from alignak.objects.command import Command
 from alignak.objects.timeperiod import Timeperiod
 from alignak.objects.item import Items
 
+logger = logging.getLogger(__name__)
 
 class TestEndParsingType(AlignakTest):
     """

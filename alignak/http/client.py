@@ -51,7 +51,8 @@ import warnings
 import requests
 
 
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.misc.serialization import serialize
 
 

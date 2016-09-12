@@ -59,7 +59,8 @@ except ImportError:
 
 from alignak.objects.item import Item, Items
 from alignak.property import StringProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class Pack(Item):

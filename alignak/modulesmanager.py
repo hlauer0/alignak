@@ -57,7 +57,8 @@ import importlib
 
 
 from alignak.basemodule import BaseModule
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class ModulesManager(object):

@@ -61,7 +61,8 @@ import time
 import random
 
 from alignak.util import alive_then_spare_then_deads
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 # Always initialize random :)
 random.seed()

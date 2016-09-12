@@ -83,7 +83,8 @@ from alignak.brok import Brok
 from alignak.downtime import Downtime
 from alignak.contactdowntime import ContactDowntime
 from alignak.comment import Comment
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.util import average_percentile
 from alignak.load import Load
 from alignak.http.client import HTTPClient, HTTPEXCEPTIONS

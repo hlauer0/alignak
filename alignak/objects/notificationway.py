@@ -57,7 +57,8 @@ from alignak.objects.item import Item
 from alignak.objects.commandcallitem import CommandCallItems
 
 from alignak.property import BoolProp, IntegerProp, StringProp, ListProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.commandcall import CommandCall
 
 

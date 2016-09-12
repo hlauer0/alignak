@@ -22,7 +22,8 @@ import time
 
 import cherrypy
 
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.http.generic_interface import GenericInterface
 from alignak.util import jsonify_r
 

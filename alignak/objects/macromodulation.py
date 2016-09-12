@@ -52,7 +52,8 @@ import time
 from alignak.objects.item import Item, Items
 from alignak.property import StringProp
 from alignak.util import to_name_if_possible
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class MacroModulation(Item):

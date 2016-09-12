@@ -51,7 +51,8 @@ import hashlib
 import base64
 import socket
 
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.http.client import HTTPClient
 
 

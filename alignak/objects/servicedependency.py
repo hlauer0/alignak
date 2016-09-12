@@ -55,7 +55,8 @@ implements dependencies between services. Basically used for parsing.
 
 """
 from alignak.property import BoolProp, StringProp, ListProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 from .item import Item, Items
 

@@ -58,7 +58,8 @@ import copy
 from alignak.objects.item import Item
 from alignak.objects.itemgroup import Itemgroup, Itemgroups
 from alignak.property import BoolProp, StringProp, DictProp, ListProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 # It change from hostgroup Class because there is no members
 # properties, just the realm_members that we rewrite on it.

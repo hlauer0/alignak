@@ -58,7 +58,8 @@ from alignak.objects.itemgroup import Itemgroup, Itemgroups
 
 from alignak.util import get_obj_name
 from alignak.property import StringProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class Hostgroup(Itemgroup):

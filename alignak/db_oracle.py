@@ -58,7 +58,8 @@ from cx_Oracle import DataError as DataError_exp  # pylint: disable=E0401
 from cx_Oracle import OperationalError as OperationalError_exp  # pylint: disable=E0401
 
 from alignak.db import DB
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class DBOracle(DB):

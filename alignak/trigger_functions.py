@@ -55,7 +55,8 @@ import time
 import re
 
 from alignak.misc.perfdata import PerfDatas
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.objects.host import Hosts
 from alignak.objects.service import Services
 from alignak.objects.timeperiod import Timeperiods

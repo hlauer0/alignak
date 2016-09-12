@@ -62,7 +62,8 @@ import argparse
 
 import numpy as np
 
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.version import VERSION
 
 try:

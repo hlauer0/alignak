@@ -55,7 +55,8 @@ import re
 
 from alignak.util import get_sec_from_morning, get_day, get_start_of_day, get_end_of_day
 from alignak.alignakobject import AlignakObject
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 def find_day_by_weekday_offset(year, month, weekday, offset):

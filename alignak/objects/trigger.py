@@ -56,7 +56,8 @@ import traceback
 
 from alignak.objects.item import Item, Items
 from alignak.property import BoolProp, StringProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.trigger_functions import OBJS, TRIGGER_FUNCTIONS, set_value
 
 

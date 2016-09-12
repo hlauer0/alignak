@@ -48,7 +48,8 @@ from alignak.util import get_obj_name_two_args_and_void
 from alignak.misc.serialization import unserialize, AlignakClassLookupException
 from alignak.objects.item import Item, Items
 from alignak.property import BoolProp, IntegerProp, StringProp, ListProp, DictProp, AddrProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.http.client import HTTPClient, HTTPEXCEPTIONS
 
 

@@ -57,7 +57,8 @@ This module provide Contactgroup and Contactgroups class used to manage contact 
 from alignak.objects.itemgroup import Itemgroup, Itemgroups
 
 from alignak.property import StringProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 
 class Contactgroup(Itemgroup):

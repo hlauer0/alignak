@@ -60,7 +60,9 @@ import uuid
 import cStringIO
 
 
-from alignak.log import logger, BrokHandler
+import logging
+logger = logging.getLogger(__name__)
+from alignak.log import BrokHandler
 from alignak.misc.common import setproctitle
 
 

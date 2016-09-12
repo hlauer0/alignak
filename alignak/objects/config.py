@@ -117,7 +117,8 @@ from alignak.objects.brokerlink import BrokerLink, BrokerLinks
 from alignak.objects.receiverlink import ReceiverLink, ReceiverLinks
 from alignak.objects.pollerlink import PollerLink, PollerLinks
 from alignak.graph import Graph
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.property import (UnusedProp, BoolProp, IntegerProp, CharProp,
                               StringProp, LogLevelProp, ListProp, ToGuessProp)
 from alignak.daemon import get_cur_user, get_cur_group

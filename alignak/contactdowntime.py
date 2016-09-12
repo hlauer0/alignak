@@ -48,7 +48,8 @@
 """
 import time
 import uuid
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.alignakobject import AlignakObject
 from alignak.property import BoolProp, IntegerProp, StringProp
 

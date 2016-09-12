@@ -73,7 +73,8 @@ from alignak.property import (StringProp, ListProp, BoolProp, SetProp,
 from alignak.alignakobject import AlignakObject
 from alignak.brok import Brok
 from alignak.util import strip_and_uniq, is_complex_expr
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.complexexpression import ComplexExpressionFactory
 from alignak.graph import Graph
 

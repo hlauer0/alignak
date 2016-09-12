@@ -82,7 +82,8 @@ from alignak.eventhandler import EventHandler
 from alignak.dependencynode import DependencyNodeFactory
 from alignak.acknowledge import Acknowledge
 from alignak.comment import Comment
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.commandcall import CommandCall
 
 

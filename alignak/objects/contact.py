@@ -56,7 +56,9 @@ from alignak.objects.commandcallitem import CommandCallItems
 
 from alignak.util import strip_and_uniq
 from alignak.property import BoolProp, IntegerProp, StringProp, ListProp
-from alignak.log import logger, naglog_result
+import logging
+logger = logging.getLogger(__name__)
+from alignak.log import naglog_result
 from alignak.commandcall import CommandCall
 
 

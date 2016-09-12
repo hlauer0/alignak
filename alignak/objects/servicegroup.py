@@ -52,7 +52,8 @@ This module provide Servicegroup and Servicegroups classes used to group service
 """
 
 from alignak.property import StringProp
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 
 from .itemgroup import Itemgroup, Itemgroups
 

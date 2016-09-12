@@ -126,7 +126,8 @@ except ImportError, exp:  # Like in nt system
         return []
 
 from alignak.http.daemon import HTTPDaemon, InvalidWorkDir
-from alignak.log import logger
+import logging
+logger = logging.getLogger(__name__)
 from alignak.stats import statsmgr
 from alignak.modulesmanager import ModulesManager
 from alignak.property import StringProp, BoolProp, PathProp, ConfigPathProp, IntegerProp, \
@@ -659,12 +660,6 @@ class Daemon(object):  # pylint: disable=R0902
         self.check_parallel_run()
         self.setup_communication_daemon()
 
-        # Setting log level
-        logger.setLevel(self.log_level)
-        # Force the debug level if the daemon is said to start with such level
-        if self.debug:
-            logger.setLevel('DEBUG')
-
         # Then start to log all in the local file if asked so
         self.register_local_log()
         if self.is_daemon:
@@ -1183,3 +1178,18 @@ class Daemon(object):  # pylint: disable=R0902
                     had_some_objects = True
                     self.add(obj)
         return had_some_objects
+
+    def setup_alignak_logger(self):
+        # Setting log level
+        alignak_logger = logging.getLogger("alignak")
+        alignak_logger.setLevel('INFO')
+        # Force the debug level if the daemon is said to start with such level
+        if self.debug:
+            alignak_logger.setLevel('DEBUG')
+
+        # Log will be broks
+        for line in self.get_header():
+            logger.info(line)
+
+        self.load_config_file()
+        alignak_logger.setLevel(self.log_level)
